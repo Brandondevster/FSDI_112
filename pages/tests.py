@@ -14,7 +14,7 @@ class SimpleTests(SimpleTestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_home_page_uses_correct_template(self):
-        repsonse = self.client.get("/")
+        response = self.client.get("/")
         self.assertTemplateUsed(response, "index.html")
 
     def test_home_page_extends_base_template(self):
@@ -31,7 +31,7 @@ class SimpleTests(SimpleTestCase):
         self.assertTemplateUsed(response, "index.html")
 
     def test_about_page_uses_correct_template(self):
-        repsonse = self.client.get("/about/")
+        response = self.client.get("/about/")
         self.assertTemplateUsed(response, "about.html")
 
     def test_about_page_extends_base_template(self):
